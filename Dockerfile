@@ -19,6 +19,9 @@ COPY data/default.conf /etc/apache2/sites-available/
 
 RUN a2dissite 000-default && a2enmod rewrite && a2ensite default
 
+RUN echo "ServerName siepie-owncloud" > /etc/apache2/conf-available/servername.conf && \
+    a2enconf servername
+
 RUN mkdir -p /owncloud/owncloud && \
     mkdir -p /owncloud/logs && \ 
     mkdir -p /owncloud/data && \ 
