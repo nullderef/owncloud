@@ -2,7 +2,7 @@ FROM phusion/baseimage:0.9.22
 
 LABEL org.label-schema.vcs-url="https://github.com/nullderef/owncloud"
 
-ENV OWNCLOUD_FILE=owncloud-10.0.3.tar.bz2
+ENV OWNCLOUD_FILE=owncloud-10.0.4.tar.bz2
 
 # Use baseimage-docker's init system.
 CMD [ "/sbin/my_init" ]
